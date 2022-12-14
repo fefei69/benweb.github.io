@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Briggs Automotive Company 介紹</title>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<style type="text/css">
+    .url_a {
+      position: absolute;
+      width: 50px;
+      height: 55px;
+      left: 129px;
+      top: 204px;
+    }
+	.container {
+	  
+	  height: 100px;
+	  text-align: center;
+	}
+	.content {
+	  font-size: 20px;
+	  
+	  width: 100%;
+	  display: inline-block;
+	 
+	}
+	.content_bold {
+	  font-size: 40px;
+	  font-weight:bold;
+	  
+	  width: 100%;
+	  display: inline-block;
+	 
+	}
+	</style>
+	<script>
+        $(document).ready(function(){
+            for(i=0;i<6;i++){
+                $("#menu img:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    change()
+                    clearInterval(clock)
+                    clock=setInterval(auto,2000)
+                })
+            }
+            
+            n=0
+            clock=setInterval(auto,2000)
+            $("#products img").mouseover(function(){
+                clearInterval(clock)
+            })
+            $("#products img").mouseout(function(){
+                clock=setInterval(auto,2000)
+            })
+            function auto(){
+                n++
+                if(n>5){
+                    n=0
+                }
+                change()
+            }
+            function change(){
+				$("#products img").fadeOut(400,function(){
+                    $("#products img").attr("src","assets/gb"+n+".jpg")
+                    $("#products img").fadeIn()
+                })
+                /*$("#products").css("background-image","url(assets/g"+n+".jpg)")*/
+                $("#menu img").attr("src","assets/whitedot.png")
+                $("#menu img:eq("+n+")").attr("src","assets/greendot.png")
+            }
+			})
+			
+			$(document).ready(function(){
+				for(i=0;i<6;i++){
+					$("#menu2 img:eq("+i+")").click({id:i},function(e){
+						n1=e.data.id
+						change2()
+						clearInterval(clock)
+						clock=setInterval(auto,2000)
+					})
+				}
+            
+            n1=0
+            clock=setInterval(auto,2000)
+            $("#products2 img").mouseover(function(){
+                clearInterval(clock)
+            })
+            $("#products2 img").mouseout(function(){
+                clock=setInterval(auto,2000)
+            })
+            function auto(){
+                n1++
+                if(n1>5){
+                    n1=0
+                }
+                change2()
+            }
+			function change2(){
+				$("#products2 img").fadeOut(400,function(){
+                    $("#products2 img").attr("src","assets/"+n1+".jpg")
+                    $("#products2 img").fadeIn()
+                })
+                
+                $("#menu2 img").attr("src","assets/whitedot.png")
+                $("#menu2 img:eq("+n1+")").attr("src","assets/greendot.png")
+            }})
+        
+    </script>
+	
+	
+	</head>
+<body>
+
+<div data-role="page" id = "home">
+	<div data-role="header"  data-position="inline" data-fullscreen="true">
+		<h1>Briggs Automotive Company 介紹</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+<!--<div class="Mobile-bar Mobile-bar--top" data-nc-group="top" data-controller="MobileOffset">
+
+    <div data-nc-container="top-left">
+      <a href="/" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
+        
+          
+            <img src="assets/bacicon.png" alt="BAC " class="Mobile-bar-branding-logo" />
+          
+        
+      </a>
+    </div> -->
+
+	<div data-role="content">
+		<p align = "center"><img src = "assets/A76I0402.jpg"></p>
+		<p class="" style="white-space:pre-wrap;"><strong>SINGLE-MINDED</strong></p><p class="" style="white-space:pre-wrap;">It’s safe to say BAC’s story is one of remarkable success: how an unconventional driving dream became reality in Britain before taking all four corners of the world by storm. First launched in 2011, the BAC Mono is the realisation of two brothers’ vision of a road vehicle that offers the most authentic and pure driving experience possible while implementing the very latest racing technology. </p><p class="" style="white-space:pre-wrap;">BAC’s founding brothers Neill and Ian Briggs were indoctrinated into the world of cars from an early age and quickly developed a love for the industry that continued into adulthood. They always saw themselves creating their own car and bringing it to market one day, but set about getting the necessary professional experience to ensure they had the perfect platform from which to build. </p><p class="" style="white-space:pre-wrap;">After graduating from their respective university courses, the brothers set up their own design/engineering consultancy, with Neill leading engineering activities and Ian heading up the design elements. The company was commissioned to work on major automotive projects with the likes of Porsche, Mercedes, Smart, AMG, Maybach, Ford and Bentley, but they also gained valuable experience with smaller brands, too.</p><p class="" style="white-space:pre-wrap;">While enhancing their company and personal reputations and delivering for OEMs (learning vital skills and business approaches in the process), Neill and Ian worked out their niche and saw a gap in the market that they believed simply had to be filled – a single-seater, road-legal vehicle that focuses purely on the person behind the wheel and is totally uncompromised.</p>		
+	</div><!-- /content -->
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" class="ui-btn-active">回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<div data-role="page" id = "searchEngine">
+
+	<div data-role="header"  data-position="inline">
+		<h1>Briggs Automotive Company Search Engine</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div class="content-primary">	<!-- 將所有page都放在這提供搜尋 -->
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Search categories" >
+				<li data-role="list-divider">B</li>
+				<li><a href="#BACMono">BAC Mono</a></li>
+				<li><a href="#BACMonoR">BAC Mono R</a></li>
+				<li data-role="list-divider">D</li>
+				<li><a href="#map">Dealer Network</a></li>
+				<li data-role="list-divider">G</li>
+				<li><a href="#gallery1">Gallery Mono</a></li>
+				<li><a href="#gallery2">Gallery Mono R</a></li>
+				<li data-role="list-divider">H</li>
+				<li><a href="#home">Home</a></li>
+				<li data-role="list-divider">M</li>
+				<li><a href="#models">Models</a></li>
+			</ul>
+		</div><!--/content-primary -->			
+	</div><!-- /content -->
+	
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid">車系</a></li>
+				<li><a href="#list" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search"  class="ui-btn-active">搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" >回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+	
+<div data-role="page" id = "map">
+	<div data-role="header"  data-position="inline" data-fullscreen="true">
+		<h1>Briggs Automotive Company 據點</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p><img src = "assets/UK.jpg"></p>
+		<a href="https://www.bac-mono.com/"><div class="url_a"></div></a>
+		<div data-nc-container="top-left">
+		  <a href="#home" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
+			
+			  
+				<img src="assets/bacicon.png" alt="BAC" class="Mobile-bar-branding-logo" />
+			  
+			
+		  </a>
+		</div> 
+		<p>Manufacturing Centre
+
+			Unit 14, Compass Point Industrial Park 
+
+			Spindus Road 
+
+			Liverpool 
+
+			L24 1YA 
+
+			United Kingdom
+		</p>
+	</div><!-- /content -->
+	
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid">車系</a></li>
+				<li><a href="#map" data-icon="star"  class="ui-btn-active">據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" >回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id = "models">
+
+	<div data-role="header"  data-position="inline" data-fullscreen="true">
+		<h1>BAC Models</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="#BACMono">
+				<img src="assets/Mono1.jpg"/>
+				<h3>BAC Mono</h3>
+				
+			</a></li>
+		
+			<li><a href="#BACMonoR">
+				<img src="assets/MonoR.jpg" />
+				<h3>BAC Mono R</h3>
+				
+			<li><a href="#gallery1">
+				<img src="assets/Gicon.jpg" />
+				<h3>Gallery Mono</h3>
+				
+			<li><a href="#gallery2">
+				<img src="assets/Gicon2.jpg" />
+				<h3>Gallery Mono R</h3>
+			</a></li>
+		</ul>
+	
+	</div><!-- /content -->
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid" class="ui-btn-active">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" >回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id = "BACMono">
+	<div data-role="header" >
+		<h1>BAC Mono</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p align = "center"><img src = "assets/Mono.jpg"></p>
+		<div class = "container">
+			<div class = "content_bold">
+			<span></span>Concept<span></span>
+			</div>
+		</div>
+		
+		<figure class="block-animation-none">
+		<blockquote data-animation-role="quote">
+		 <div class = "container">
+			<div class = "content">
+				<span>&#147;</span>That is one of the most exciting shapes I’ve ever seen!<span>&#148;</span>
+			</div>
+		</div>
+		</blockquote>
+		</figure>
+		<p align = "center"><img src = "assets/070_06.jpg"></p>
+		<div class = "container">
+			<div class = "content_bold">
+			<span></span>INNOVATION<span></span>
+			</div>
+		</div>
+		
+		<figure class="block-animation-none">
+		<blockquote data-animation-role="quote">
+		 <div class = "container">
+			<div class = "content">
+				<span>&#147;</span>Embracing the latest technology from around the globe and pioneering a number of world-firsts, Mono is known for setting bar in terms of cutting-edge innovation<span>&#148;</span>
+			</div>
+		</div>
+		</blockquote>
+		</figure>
+	</div><!-- /content -->
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid" class="ui-btn-active">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" >回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id = "BACMonoR">
+	<div data-role="header" >
+		<h1>BAC Mono R</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p align = "center"><img src = "assets/MonoR_1.jpg"></p>
+		<div class = "container">
+			<div class = "content_bold">
+			<span></span>DESIGN<span></span>
+			</div>
+		</div>
+		
+		<figure class="block-animation-none">
+		<blockquote data-animation-role="quote">
+		 <div class = "container">
+			<div class = "content">
+				<span>&#147;</span>A stunning new generation of Mono design DNA, epitomising true efficiency of form with a sleeker and tighter appearance<span>&#148;</span>
+			</div>
+		</div>
+		</blockquote>
+		</figure>
+		<p align = "center"><img src = "assets/MonoR01_17.jpg"></p>
+		<div class = "container">
+			<div class = "content_bold">
+			<span></span>POWER<span></span>
+			</div>
+		</div>
+		
+		<figure class="block-animation-none">
+		<blockquote data-animation-role="quote">
+		 <div class = "container">
+			<div class = "content">
+				<span>&#147;</span>R delivers an astonishing 343bhp from the 2.5-litre Mountune engine, resulting in the highest specific output of all time for a naturally aspirated, road-legal model: 138bhp per litre<span>&#148;</span>
+			</div>
+		</div>
+		</blockquote>
+		</figure>
+	</div><!-- /content -->
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid" class="ui-btn-active">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" >回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id = "gallery1">
+	<div data-role="header"  data-position="inline" data-fullscreen="true">
+		<h1>BAC Gallery</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div id="all">
+			<div id="products"><p align = "center"><img src="assets/gb6.jpg"></p></div>
+			<div id="menu"><p align = "center"><img src="assets/greendot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"></p></div>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" ">回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id = "gallery2">
+	<div data-role="header"  data-position="inline" data-fullscreen="true">
+		<h1>BAC Gallery</h1>
+		<a href="index.html" data-icon="gear" class="ui-btn-right">Back</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div id="all">
+			<div id="products2"><p align = "center"><img src="assets/gb4.jpg"></p></div>
+			<div id="menu2"><p align = "center"><img src="assets/greendot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"><img src="assets/whitedot.png"></p></div>
+		</div>
+	</div><!-- /content -->
+	
+	<div data-role="footer" >
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#models" data-icon="grid">車系</a></li>
+				<li><a href="#map" data-icon="star" >據點</a></li>
+				<li><a href="#searchEngine" data-icon="search" >搜尋功能</a></li>
+				<li><a href="#home" data-icon="home" ">回首頁</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
